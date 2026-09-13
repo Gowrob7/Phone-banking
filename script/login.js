@@ -7,7 +7,7 @@ document.getElementById('login-btn').addEventListener('click',function(){
     if(matchNum == '01759662540' && PinV == '2233'){
         alert('Login Succesful');
 
-     window.location.assign("/home.html");
+     window.location.("home.html");
     }
     else{
         alert('Invalid Pin');

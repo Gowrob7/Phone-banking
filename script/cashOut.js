@@ -32,6 +32,19 @@
     if(CashOut_Pin =='2233'){
         alert("CashOut Succesfull");
         setBalance(New_Balance);
+
+          const history = document.getElementById("history-container");
+        const NewEl = document.createElement('div')
+        NewEl.innerHTML = `
+        <div class=" rounded-xl ">
+        <div class ="  grid grid-cols-2 gap-2 space-y-3 bg-base-200 bg-base-500">
+        <h2 class= " text-neutral-800 "> CashOut</h2>
+        <p class = " text-neutral-800 ">Account <br>  ${cashout_Number}</p>
+        <h2 class =" text-neutral-800 "> Ammount <br> ${cashout_Amount} Tk</h2>
+        <p class = "text-neutral-800">Time <br>  ${new Date().toLocaleString()}</p>
+        </div>   
+        </div>`
+        history.append(NewEl)
     }
     else{
         alert("Invalid Pin");

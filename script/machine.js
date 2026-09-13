@@ -22,10 +22,13 @@ function showOnly(id){
   const cashOut = document.getElementById('cashout');
   const transferBalance = document.getElementById("transfer-money");
   const payment =document.getElementById("payment")
+  const Bonus = document.getElementById("bonus");
+
   cashOut.classList.add("hidden");
   addmoney.classList.add("hidden");
   transferBalance.classList.add("hidden");
   payment.classList.add("hidden");
+  Bonus.classList.add("hidden");
   
 
   const slected = document.getElementById(id);

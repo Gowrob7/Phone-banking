@@ -1,3 +1,5 @@
+// const { createElement } = require("react");
+
 document.getElementById("add-money-btn").addEventListener("click",function(){
     const bankAccount =getElFormInput("add-money-bank");
     if(bankAccount == "Select a Bank"){
@@ -18,6 +20,18 @@ document.getElementById("add-money-btn").addEventListener("click",function(){
     if(bankPin === '2233'){
         alert("Succesful");
         setBalance(currentBalance)
+        const history = document.getElementById("history-container");
+        const NewEl = document.createElement('div')
+        NewEl.innerHTML = `
+          <div class=" rounded-xl ">
+        <div class ="  grid grid-cols-2 gap-2 space-y-3 bg-base-200 bg-base-500">
+        <h2 class= " text-neutral-800 "> Add Money</h2>
+        <p class = " text-neutral-800 ">Account <br> <span> ${cashout_Number}</span></p>
+        <h2 class =" text-neutral-800 "> Ammount <br> <span> ${cashout_Amount} Tk</span></h2>
+        <p class = "text-neutral-800">Time <br> <span> ${new Date().toLocaleString()}</span></p>
+        </div>   
+        </div>`
+        history.append(NewEl)
         
     } 
     else{

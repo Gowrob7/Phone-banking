@@ -22,6 +22,19 @@ document.getElementById("money-transfer-btn").addEventListener('click',function(
     if(getPinTrans == '2233'){
         alert("succesful transfer")
         setBalance(transferBalance)
+
+          const history = document.getElementById("history-container");
+        const NewEl = document.createElement('div')
+        NewEl.innerHTML = `
+           <div class=" rounded-xl bg-base-100 w-full shadow p-6">
+        <div class ="  grid grid-cols-2 gap-2 space-y-3 ">
+        <h2 class= " text-neutral-800 font-bold "> Money Transfer</h2>
+        <p class = " text-neutral-800 font-bold ">Account  <br> ${transferMoney}</p>
+        <h2 class =" text-neutral-800 font-bold"> Ammount <br>  ${call } Tk</h2>
+        <p class = "text-neutral-800 font-bold">Time <br> ${new Date().toLocaleString()}</p>
+        </div>   
+        </div>`
+        history.append(NewEl)
     }else{
         alert("invalid pin")
         return;

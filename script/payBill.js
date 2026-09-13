@@ -21,6 +21,20 @@ document.getElementById("Pay-bill-btn").addEventListener("click",function(){
     if(payPin === "2233"){
         alert("Payment Succesful")
         setBalance(pay_bill)
+
+          const history = document.getElementById("history-container");
+        const NewEl = document.createElement('div')
+        NewEl.innerHTML = `
+            <div class=" rounded-xl bg-base-100 w-full shadow p-6">
+        <div class ="  grid grid-cols-2 gap-2 space-y-3 bg-base-200 bg-base-500">
+        <h2 class= " text-neutral-800 font-bold "> Payment</h2>
+        <p class = " text-neutral-800 font-bold ">Bank <br> ${payBill}</p>
+        <p class =" text-neutral-800  font-bold"> Account  <br> ${payment_number}</p>
+        <p class =" text-neutral-800 font-bold"> Account <br> ${payCall} Tk</p>
+        <p class = "text-neutral-800 font-bold" >Time<br> ${new Date().toLocaleString()}</p>
+        </div>   
+        </div>`
+        history.append(NewEl)
     }else{
         alert("Invalid Pin");
         return;

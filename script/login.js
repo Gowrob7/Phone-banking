@@ -5,12 +5,12 @@ document.getElementById('login-btn').addEventListener('click',function(){
     const PinV = Pin.value;
 
     if(matchNum == '01759662540' && PinV == '2233'){
-        alert('login succesful');
+        alert('Login Succesful');
 
      window.location.assign("/home.html");
     }
     else{
-        alert('login fail');
+        alert('Invalid Pin');
        return;
     }
 })

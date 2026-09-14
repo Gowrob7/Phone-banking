@@ -26,9 +26,10 @@ document.getElementById("add-money-btn").addEventListener("click",function(){
           <div class=" rounded-xl ">
         <div class ="  grid grid-cols-2 gap-2 space-y-3 bg-base-200 bg-base-500">
         <h2 class= " text-neutral-800 "> Add Money</h2>
-        <p class = " text-neutral-800 ">Account <br> <span> ${cashout_Number}</span></p>
-        <h2 class =" text-neutral-800 "> Ammount <br> <span> ${cashout_Amount} Tk</span></h2>
-        <p class = "text-neutral-800">Time <br> <span> ${new Date().toLocaleString()}</span></p>
+        <p class = " text-neutral-800 ">Bank <br>  ${bankAccount}</p>
+        <p class = " text-neutral-800 ">Account <br>  ${bankAddMoney }</p>
+        <h2 class =" text-neutral-800 "> Ammount <br>  ${bankAmmount} Tk</h2>
+        <p class = "text-neutral-800">Time <br>  ${new Date().toLocaleString()}</p>
         </div>   
         </div>`
         history.append(NewEl)

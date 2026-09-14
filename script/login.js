@@ -4,10 +4,10 @@ document.getElementById('login-btn').addEventListener('click',function(){
     const Pin = document.getElementById('pin-code');
     const PinV = Pin.value;
 
-    if(matchNum == '01759662540' && PinV == '2233'){
+    if( PinV == '2233'){
         alert('Login Succesful');
 
-     window.location.assign("/home.html");
+     window.location.href ="/home.html";
     }
     else{
         alert('Invalid Pin');

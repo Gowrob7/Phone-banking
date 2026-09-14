@@ -7,7 +7,7 @@ document.getElementById('login-btn').addEventListener('click',function(){
     if( PinV == '2233'){
         alert('Login Succesful');
 
-     window.location.href ="/home.html";
+     window.location.assign("/home.html");
     }
     else{
         alert('Invalid Pin');
